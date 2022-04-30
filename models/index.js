@@ -1,2 +1,2 @@
-const {User,Thought}=require("./")
+const {User,Thought}=require("../models")
 module.exports={User,Thought}
