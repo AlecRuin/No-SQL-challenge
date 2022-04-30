@@ -13,16 +13,16 @@ const UserSchema=new Schema({
         unique:true,
         match: [/.+@.+\..+/]
     },
-    notes:[//one to many
+    thoughts:[//one to many
         {
             type:Schema.Types.ObjectId,
-            ref:"thoughts"
+            ref:"Thought"
         }
     ],
     friends:[
         {
             type:Schema.Types.ObjectId,
-            ref:"user"
+            ref:"User"
         }
     ]
 })
