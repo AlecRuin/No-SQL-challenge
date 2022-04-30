@@ -1,3 +1,2 @@
-const User =require("./User")
-
-module.exports={User}
+const {User,Thought}=require("./")
+module.exports={User,Thought}
