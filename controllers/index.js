@@ -1,4 +1,4 @@
 const router = require("express").Router()
 const api=require("./api")
-router.get("/api",api)
+router.use("/api",api)
 module.exports=router
