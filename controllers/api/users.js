@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const User=require("../../models/User")
+const Thought = require("../../models/Thought")
 router.get("/",async (req,res)=>{
     try {
         var AllUsers= await User.find({})
@@ -40,6 +41,7 @@ router.put("/:id",async({params,body},res)=>{
 router.delete("/:id",async(req,res)=>{
     try {
         var deleted = await User.findByIdAndDelete({_id:req.params.id})
+        // var deletedThoughts= await Thought.deleteMany()
         res.status(200).json(deleted)
     } catch (error) {
         res.status(500).json(error)
